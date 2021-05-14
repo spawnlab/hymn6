@@ -1,0 +1,15 @@
+{
+  "name": "hymn6-sapling",
+  "version": "0.1.4",
+  "description": "this is the backend server for hymn6-sapling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SpawnLab",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

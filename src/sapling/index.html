@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <!-- Include Web Monetization -->
+        <meta name="monetization" content="$ilp.uphold.com/ReDMXjYFmjRL">
+        <title>Hymn6 Live</title>
+        <!-- Include AmplitudeJS -->
+        <script type="application/javascript" src="https://cdn.jsdelivr.net/npm/amplitudejs@latest/dist/amplitude.min.js"></script>
+        <!-- Include Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,400i">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <!-- Include Material Design Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Include Style Sheet -->
+        <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Hymn6 Live</h1>
+            <h2>Praise thy Silicon! 📻</h2>
+            <h4>🎵🎶🎼🎷🎸🎹🎺🎻🥁</h4>
+        </header>
+        <main>
+            <div class="prompt hidden" id="wm-absent">
+                <img src="img/web-monetization-not-found-logo.png" alt="wm-not-found-logo"/>
+                <p>Ooops...looks like you donot have a web-monetization provider setup!</p>
+                <p>To listen to some tunes, make sure you have installed a monetization provider <br/>either natively in the browser or via an extension.</p>
+                <p>If you have no idea what to do, head over to <a href="https://coil.com/" target="_blank">Coil</a> for more instructions.</p>
+            </div>
+            <div class="prompt hidden" id="wm-stopped">
+                <img src="img/web-monetization-issues-logo.png" alt="wm-issue-logo"/>
+                <p>Hmmm...we have detected your web-monetization provider but it seems to be stopped!</p>
+                <p>Before we kick in some beats for you, maybe you need to Sign-In to or Configure <br/>your web-monetization provider via an extension or natively in the browser.</p> 
+                <p>If needed, reach-out to your Web-monetization provider support team for help.</p>
+            </div>
+            <div class="loading hidden" id="wm-loading">
+                <img src="img/web-monetization-dollar-logo-spinner.png" alt="wm-loading-spinner"/>
+                <p>Just a sec!</p>
+                <p>Waiting for connection to your web-monetization provider...</p>
+            </div>
+            <div class="hidden" id="single-song-player-loading">
+                <div class="lds-ripple">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            <div class="hidden" id="single-song-player">
+                <img data-amplitude-song-info="cover_art_url"/>
+                <div class="bottom-container">
+                    <div class="progress-container">
+                        <progress class="amplitude-song-played-progress" id="song-played-progress"></progress>
+                    </div>
+                    <div class="control-container">
+                        <div class="amplitude-play-pause" id="play-pause"></div>
+                        <div class="meta-container">
+                            <span data-amplitude-song-info="name" class="song-name"></span>
+                            <span data-amplitude-song-info="artist" class="song-artist"></span>
+                            <span data-amplitude-song-info="genre" class="song-genre"></span>
+                        </div>
+                    </div>
+                    <div id="volume-container">
+                        <img id="mute-button" src="img/volume.svg"/>
+                        <input id="volume-slider" type="range" class="amplitude-volume-slider" step="1"/>
+                    </div>
+                </div>
+                <div id="user-profile">
+                    <span id="profile-btn" class="material-icons whitesmoke">face</span>
+                    <span id="favorite-btn" class="material-icons whitesmoke md-inactive">favorite</span>
+                </div> 
+                <div id="user-profile-overlay" class="hidden">
+                    <span id="overlay-close-btn" class="material-icons whitesmoke">clear</span>
+                    <div id="user-login-prompt">
+                        <p>Want some recommendations based on your favorites so far?</p>
+                        <p>Please login below:</p>
+                        <input id="login-id" type="text" placeholder="Your Nickname">
+                        <input id="login-btn" type="submit" value="Login">
+                        <p id="login-prompt"></p>
+                    </div>
+                    <div id="user-recommendations">
+                    </div>
+                </div>
+            </div>
+            <!-- Include main.js -->
+            <script type="application/javascript" src="js/main.js"></script>
+        </main>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-columns">
+                    <div class="footer-main">Made with ❤️ by SpawnLab <img src="img/logo-small-transparent.png" alt="spawnlab-logo"></div>
+                    <div class="footer-sidebar-first">v0.1.4 (sapling)</div>
+                    <div class="footer-sidebar-second">
+                        <div class="streaming-box">
+                            <img class="hidden" id="wm-icon-stopped" src="img/wm-icon-stopped.svg" alt="wm-icon-stopped"/>
+                            <img class="hidden" id="wm-icon-started" src="img/wm-icon-started.svg" alt="wm-icon-started"/>
+                        </div>
+                        <div class="led-box">
+                            <div class="led-red hidden" id="red-led"></div>
+                            <div class="led-yellow hidden" id="yellow-led"></div>
+                            <div class="led-green hidden" id="green-led"></div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
