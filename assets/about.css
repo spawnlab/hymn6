@@ -1,0 +1,18 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body
+{
+    text-align: center;
+    background-image: url('paint.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 
+{
+    font-size: 72px;
+    padding: 20px;
+    margin: 40px;
+}

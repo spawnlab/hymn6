@@ -1,0 +1,85 @@
+/*Google fonts*/
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body
+{
+    text-align: center;
+    background-image: url('splash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+h1 
+{
+    font-size: 72px;
+    padding: 20px;
+    margin: 40px;
+}
+
+h3 
+{
+    font-size: 30px;
+    padding: 20px;
+    margin: 15px;
+}
+
+h4
+{
+    font-size: 42px;
+}
+
+h5
+{
+    padding: 5px;
+    margin: 10px;
+}
+
+h6
+{
+    font-size: 18px;
+    padding: 5px;
+    margin: 20px;
+}
+
+button
+{
+    padding: 20px;
+    margin: 15px;
+}
+
+.qtext
+{
+    margin-left: 15%;
+    margin-right: 15%;
+    font-size: 18px;
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:visited {
+    color: black;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a:active {
+    color: pink;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.row {
+    margin-left: 25%;
+    margin-right: 25%;
+}
